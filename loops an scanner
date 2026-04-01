@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class StudentDetails {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Ask number of students
+        System.out.print("How many Students are there? ");
+        int students = sc.nextInt();
+
+        // Ask number of subjects
+        System.out.print("How many Subjects? ");
+        int subjects = sc.nextInt();
+        sc.nextLine(); // consume leftover newline
+
+        // Loop through each student
+        for (int i = 1; i <= students; i++) {
+            System.out.println();
+            System.out.println("Student " + i);
+
+            // Loop through each subject
+            for (int j = 1; j <= subjects; j++) {
+                System.out.print("Enter Subject Name: ");
+                String subject = sc.nextLine();
+
+                System.out.print("Enter Marks: ");
+                int marks = sc.nextInt();
+                sc.nextLine(); // consume leftover newline
+
+                // Display entered subject and marks
+                System.out.println("Subject: " + subject + " | Marks: " + marks);
+                System.out.println(); // blank line after each subject
+            }
+        }
+
+        sc.close();
+    }
+}
